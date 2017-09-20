@@ -10,12 +10,12 @@ Feel free to explore and dive deeper into topics that seem intereting to you. If
 
 [EcmaScript 6 features](http://es6-features.org/)
 
-[Egghead.io ES6 :fire:](https://egghead.io/courses/learn-es6-ecmascript-2015)
+[Egghead.io ES6 🔥](https://egghead.io/courses/learn-es6-ecmascript-2015)
 
 [FreeCodeCamp OOP JS](https://www.freecodecamp.org/challenges/declare-javascript-objects-as-variables)
 
 ### CSS
 
-[Complete Guide to Flexbox :fire:](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+[Complete Guide to Flexbox 🔥](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
-[CSS3 Selectors :fire:](http://flukeout.github.io/)
+[CSS3 Selectors 🔥](http://flukeout.github.io/)
