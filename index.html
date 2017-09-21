@@ -5,6 +5,64 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 <script>
+const exercises = {
+    "id1" : {
+        "muscles" : "chest",
+        "name" : "Barbell Bench Press",
+        "url" : "http://peakfatlossandfitness.com/uploads/3/4/5/0/34504677/51.."
+    },
+    "id10" : {
+        "muscles" : "biceps",
+        "name" : "Barbell Curl",
+        "url" : "http://build-muscle-101.com/wp-content/uploads/2014/12/barbe.."
+    },
+    "id11" : {
+        "muscles" : "biceps",
+        "name" : "Scott Curl Machine",
+        "url" : "http://bodybuilding-wizard.com/wp-content/uploads/2014/07/ma.."
+    },
+    "id12" : {
+    "muscles" : "biceps",
+    "name" : "Dumbbell Concentration Curl",
+    "url" : "http://robustclub.com/wp-content/uploads/2016/08/concentrati.."
+    },
+    "id13" : {
+    "muscles" : "biceps",
+    "name" : "Hight Cable Curls",
+    "url" : "http://www.fitnessandpower.com/wp-content/uploads/2017/02/hi.."
+    },
+    "id14" : {
+    "muscles" : "triceps",
+    "name" : "Bench Dip",
+    "url" : "http://www.exercisegoals.com/images/easier-bench-dip.jpg"
+    },
+    "id15" : {
+    "muscles" : "triceps",
+    "name" : "Triceps Push-Down",
+    "url" : "http://gym-inspiration.com/uploads/images/kpinom-23exercisel.."
+    },
+    "id16" : {
+    "muscles" : "triceps",
+    "name" : "Cable Lying Triceps Extension",
+    "url" : "https://www.jefit.com/images/exercises/800_600/4708.jpg"
+    },
+    "id17" : {
+"muscles" : "triceps",
+"name" : "Dumbbell One Arm Triceps Extension",
+"url" : "https://www.strongfitnessmag.com/wp-content/uploads/2014/06/x.."
+
+},
+"id18" : {
+"muscles" : "abs",
+"name" : "Roman Chair",
+"url" : "https://www.bodycraft.com/media/catalog/product/cache/1/image.."
+},
+"id19" : {
+"muscles" : "abs",
+"name" : "Crunch",
+"url" : "https://3i133rqau023qjc1k3txdvr1-wpengine.netdna-ssl.com/wp-c.."
+}
+}
 
 var convertToF = () => {
     let degrees = document.getElementById('temperature').value;
