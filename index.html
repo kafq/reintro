@@ -13,6 +13,39 @@ var convertToF = () => {
     document.getElementById('answer').innerHTML = convertedValue + ' F';
 }
 
+var convertToC = () => {
+    let degrees = document.getElementById('temperature').value;
+    console.log(degrees);
+    let convertedValue = degrees * 200;
+    document.getElementById('answer').innerHTML = convertedValue + ' C';
+}
+
+var changeSrc = (source) => {
+    document.getElementById('gallery-main').src = source;
+}
+
+var addToDo = () => {
+    var todoValue = document.getElementById('todo-input').value;
+    var todoText = document.createTextNode(todoValue);
+
+    var todoBlock = document.createElement('div');
+
+    var completeButton = document.createElement('button');
+    var t = document.createTextNode('Delete To Do');
+    completeButton.appendChild(t);
+    completeButton.onclick = function () {
+        completeTodo();
+    }
+    todoBlock.className = "todo-single";
+    todoBlock.appendChild(todoText);
+    todoBlock.appendChild(completeButton);
+
+    document.getElementById('todolist').appendChild(todoBlock);
+}
+
+var completeTodo = () => {
+    console.log('Test');
+}
 </script>
 </head>
 
@@ -23,16 +56,32 @@ var convertToF = () => {
             <input id="temperature" placeholder="Temperature goes here">
             <div class="row">
                 <button onclick="convertToF()">to F</button>
-                <button>to C</button>
+                <button onclick="convertToC()">to C</button>
             </div>
             <span id="answer">Answer will be here</span>
         </div>
     </section>
     <section>
         <h3>Simplest Slider</h3>
+        <div class="container">
+            
+            <div class="row">
+            <img id="gallery-main" src="images/doggo_1.png"/>
+            <div class="gallery">
+                <img onclick="changeSrc(this.src)" src="images/doggo_1.png"> 
+                <img onclick="changeSrc(this.src)" src="images/doggo_2.png"> 
+                <img onclick="changeSrc(this.src)" src="images/doggo_3.png"> 
+                <img onclick="changeSrc(this.src)" src="images/doggo_4.png">    
+            </div>
+            </div>
+        </div>
     </section>
     <section>
-        <h3>To Do List</h3>           
+        <h3>To Do List</h3>
+        <input id="todo-input">
+        <button onclick="addToDo()">Add todo</button>
+        <div id="todolist">
+        </div>          
     </section>
     <section>
                                     
