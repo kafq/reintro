@@ -33,4 +33,5 @@ Feel free to explore and dive deeper into topics that seem interesting to you. I
 ### Github Tutorial
 
 [Git How To](https://githowto.com)
-[Oh shit Git](https://ohshitgit.com)
+
+[Oh shit Git](http://ohshitgit.com)
