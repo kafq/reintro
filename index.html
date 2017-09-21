@@ -91,6 +91,7 @@ var addToDo = () => {
     var completeButton = document.createElement('button');
     var t = document.createTextNode('Delete To Do');
     completeButton.appendChild(t);
+    completeButton.className = "delete-button";
     completeButton.onclick = function () {
         completeTodo();
     }
@@ -102,8 +103,54 @@ var addToDo = () => {
 }
 
 var completeTodo = () => {
+    var close = document.getElementsByClassName('delete-button');
+    for (var i = 0; i < close.length; i++) {
+        close[i].onclick = function() {
+            var div = this.parentElement;
+            div.style.display = 'none';
+        }
+    }
     console.log('Test');
 }
+
+var showAllExercises = () => {
+    document.getElementById('exercise-wrapper').innerHTML = '';
+    let keys = Object.keys(exercises);
+    console.log(keys);
+    keys.map( exerciseID => {
+        let block = document.createElement('div');
+        block.className = 'exercise-block';
+        let exerciseImage = document.createElement('img');
+        exerciseImage.src = exercises[exerciseID].url;
+        exerciseImage.className = 'exercise-image';
+
+        let exerciseName = document.createTextNode(exercises[exerciseID].name);
+        block.appendChild(exerciseName);
+        block.appendChild(exerciseImage);
+        document.getElementById('exercise-wrapper').appendChild(block);
+    })
+}
+
+var filterExercises = (muscle) => {
+    document.getElementById('exercise-wrapper').innerHTML = '';
+    let keys = Object.keys(exercises);
+    console.log(keys);
+    keys.map( exerciseID => {
+        if (exercises[exerciseID].muscles === muscle) {
+        let block = document.createElement('div');
+        block.className = 'exercise-block';
+        let exerciseImage = document.createElement('img');
+        exerciseImage.src = exercises[exerciseID].url;
+        exerciseImage.className = 'exercise-image';
+
+        let exerciseName = document.createTextNode(exercises[exerciseID].name);
+        block.appendChild(exerciseName);
+        block.appendChild(exerciseImage);
+        document.getElementById('exercise-wrapper').appendChild(block);
+        }
+    })
+}
+
 </script>
 </head>
 
@@ -142,7 +189,12 @@ var completeTodo = () => {
         </div>          
     </section>
     <section>
-                                    
+        <button onclick="showAllExercises()">Show all exercises</button>
+        <button onclick="filterExercises('biceps')">Show all biceps exercises</button>
+        <button onclick="filterExercises('chest')">Show all chest exercises</button>
+        <div id="exercise-wrapper">
+        
+        </div>                      
     </section>
     
 

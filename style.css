@@ -50,6 +50,34 @@ button {
 }
 .todo-single {
     border-bottom: 1px solid #CDCDCD;
-    padding: 10px 30px;
+    padding: 10px;
     margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 700px;
+}
+
+input {
+    border: 0;
+    border-bottom: 2px solid #000;
+    width: 300px;
+    margin-bottom: 20px;
+    padding: 5px 10px;
+}
+#exercise-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+.exercise-block {
+    padding: 10px 40px;
+    background: #CDCDCD;
+    margin: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+}
+
+.exercise-image {
+    height: 100px;
+    width: 200px;
 }
